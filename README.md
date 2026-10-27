@@ -20,14 +20,15 @@ Usa las herramientas de AI que usas normalmente. Piensa en voz alta: nos interes
 ### 1. Hay un test roto
 `npm test` tiene un test que falla. Explica la causa antes de arreglarlo.
 
-### 2. Gate de revisión humana
-Hoy `decide()` manda todo a facturación automática, y eso genera facturas con montos equivocados. Cambia `decide()` para que un ticket vaya a `NEEDS_REVIEW` cuando:
+### 2. Facturas con montos equivocados
+Hoy `decide()` manda **todo** a facturación automática. Resultado: se están emitiendo facturas con montos equivocados, y una factura mal emitida es un problema fiscal que hay que cancelar y rehacer.
 
-- el monto extraído difiere del monto reportado por el empleado en **más de 1 %**,
-- `confidence < 0.8`, o
-- el RFC no es válido. Formato: `^[A-ZÑ&]{3,4}\d{6}[A-Z0-9]{3}$`.
+Por otro lado, las auxiliares ya están saturadas: si mandamos todo a revisión humana, no les da la vida.
 
-`reasons` debe explicar **por qué**, para que la auxiliar no tenga que adivinar. Agrega tests. `fixtures/tickets.json` tiene casos útiles.
+En `fixtures/` hay tickets leídos por el modelo (`tickets.json` + `extractions/`). Algunos los leyó bien y otros no.
+
+1. **Antes de programar**, cuéntanos en 2–3 minutos qué propones y por qué.
+2. Impleméntalo en `decide()`, con tests.
 
 ### 3. Bonus, si te sobra tiempo (elige uno, no pasa nada si no llegas)
 - **a)** En producción la cola vive en Postgres y varias auxiliares piden "el siguiente" al mismo tiempo. ¿Cómo harías el claim atómico? Escribe el SQL o el pseudocódigo.
