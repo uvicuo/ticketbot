@@ -1,0 +1,11 @@
+[
+  { "id": "t1", "employeeId": "e-101", "kind": "toll", "reportedAmount": 145.0, "imageRef": "img-001" },
+  { "id": "t2", "employeeId": "e-102", "kind": "fuel", "reportedAmount": 820.5, "imageRef": "img-002" },
+  { "id": "t3", "employeeId": "e-101", "kind": "toll", "reportedAmount": 1250.0, "imageRef": "img-003" },
+  { "id": "t4", "employeeId": "e-103", "kind": "fuel", "reportedAmount": 98.0, "imageRef": "img-004" },
+  { "id": "t5", "employeeId": "e-104", "kind": "toll", "reportedAmount": 312.0, "imageRef": "img-005" },
+  { "id": "t6", "employeeId": "e-102", "kind": "fuel", "reportedAmount": 650.0, "imageRef": "img-006" },
+  { "id": "t7", "employeeId": "e-105", "kind": "fuel", "reportedAmount": 500.0, "imageRef": "img-007" },
+  { "id": "t8", "employeeId": "e-103", "kind": "toll", "reportedAmount": 200.0, "imageRef": "img-008" },
+  { "id": "t9", "employeeId": "e-104", "kind": "fuel", "reportedAmount": 1000.0, "imageRef": "img-009" }
+]
